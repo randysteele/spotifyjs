@@ -9,23 +9,18 @@ function App() {
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
-    const _token = hash.access_token;
+    console.log("I HAVE A TOKEN :point", token);
+    const token = hash.access_token;
 
-    if (_token) {
-      setToken(_token)
+    if (token) {
+      setToken(token)
     }
   }, []);
 
   return (
     <div className="app">
-      {
-        token ? (
-          <h1>I am logged in</h1>
-        ) : (
-          <Login />
-        )
-      }
-
+      <h3> Welcome to my Spotify Clone</h3>
+      <Login />
 
     </div>
   );
