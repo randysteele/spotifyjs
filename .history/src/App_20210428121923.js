@@ -29,10 +29,11 @@ function App() {
 
 
   return (
-    <div className="app">{token ?
-      <Player />
-      : <Login />
-    } </div>
+    <div className="app">{token ? (<h1>I am logged in</h1>) : (<Login />)
+    }
+
+
+    </div>
   );
 }
 

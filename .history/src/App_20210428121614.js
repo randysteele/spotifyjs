@@ -22,17 +22,18 @@ function App() {
       spotify.setAccessToken(_token);
 
       spotify.getMe().then(user => {
-        console.log(user);
+        console.log(person, user);
       })
     }
   }, []);
 
 
   return (
-    <div className="app">{token ?
-      <Player />
-      : <Login />
-    } </div>
+    <div className="app">{token ? (<h1>I am logged in</h1>) : (<Login />)
+    }
+
+
+    </div>
   );
 }
 
