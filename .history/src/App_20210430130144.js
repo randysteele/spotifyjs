@@ -5,10 +5,6 @@ import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./Player";
 // import { useDataLayerValue } from "./DataLayer";
-import Body from "./Body.css"
-import Sidebar from "./Sidebar.css"
-import Footer from "./Footer.css"
-
 
 
 
