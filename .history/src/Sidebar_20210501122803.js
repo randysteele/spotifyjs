@@ -12,7 +12,7 @@ import { initialState } from "./reducer"
 function Sidebar() {
     const [{ playlists }] = useDataLayerValue();
     console.log(playlists.items)
-
+    debugger
 
     return (
         <div className="sidebar">
@@ -27,8 +27,8 @@ function Sidebar() {
             <hr />
             {/* <SidebarOption title="Country" /> */}
 
-            {playlists?.items?.map((playlist) => (
-                <SidebarOption option={playlist.name} />
+            {playlists?.items?.map((playlist, index) => (
+                <SidebarOption option={playlist(index).name} />
             ))}
 
         </div>

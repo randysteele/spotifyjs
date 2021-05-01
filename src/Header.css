@@ -1,0 +1,22 @@
+.heater {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.header_left {
+    flex: 0.5;
+    background-color: white;
+    color: grey;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    min-width: 70px;
+}
+.header_left > input {
+    border: none;
+    width: 100%;
+}
+.header_right > h4 {
+    margin-left: 10px;
+}

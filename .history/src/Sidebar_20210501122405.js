@@ -12,7 +12,7 @@ import { initialState } from "./reducer"
 function Sidebar() {
     const [{ playlists }] = useDataLayerValue();
     console.log(playlists.items)
-
+    debugger
 
     return (
         <div className="sidebar">

@@ -57,11 +57,6 @@ function App() {
           playlists,
         });
       });
-      s.getPlaylist('37i9dQZEVXcTBlyMLqZ00r').then((response) =>
-        dispatch({
-          type: 'SET_DISCOVER_WEEKLY',
-          discover_weekly: response,
-        }))
     }
   }, []);
 

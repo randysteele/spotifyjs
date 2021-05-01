@@ -53,6 +53,3 @@
   transition: transform 0.2s ease-in-out;
   transform: scale(1.2) !important;
 }
-.footer_right * .MuiSlider-root {
-  color:#1ed15e
-}

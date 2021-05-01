@@ -29,18 +29,18 @@ class Footer extends Component {
                     <RepeatIcon className="footer_green" />
 
                 </div>
-                <div className="footer_right" >
+                <div className="footer_right">
                     <Grid container spacing={2}>
                         <Grid item>
                             <PlaylistPlayIcon />
                         </Grid>
-                        <Grid item>
-                            <VolumeDownIcon />
-                        </Grid>
-                        <Grid item xs>
-                            <Slider />
-                        </Grid>
+                        <VolumeDownIcon />
                     </Grid>
+                    <Grid item xs>
+                        <Slider />
+                    </Grid>
+
+
                 </div>
             </div>
 

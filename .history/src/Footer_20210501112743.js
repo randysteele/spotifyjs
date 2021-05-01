@@ -29,7 +29,7 @@ class Footer extends Component {
                     <RepeatIcon className="footer_green" />
 
                 </div>
-                <div className="footer_right" >
+                <div className="footer__right">
                     <Grid container spacing={2}>
                         <Grid item>
                             <PlaylistPlayIcon />
@@ -38,11 +38,14 @@ class Footer extends Component {
                             <VolumeDownIcon />
                         </Grid>
                         <Grid item xs>
-                            <Slider />
+                            <Slider aria-labelledby="continuous-slider" />
                         </Grid>
                     </Grid>
                 </div>
             </div>
+
+                </div >
+            </div >
 
         );
     }

@@ -50,9 +50,6 @@
 }
 .footer_icon:hover, 
 .footer_green:hover {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in;
   transform: scale(1.2) !important;
-}
-.footer_right * .MuiSlider-root {
-  color:#1ed15e
 }
