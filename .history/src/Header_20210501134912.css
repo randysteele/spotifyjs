@@ -5,12 +5,13 @@
 }
 .header_left {
     flex: 0.5;
-  display: flex;
-  background-color: white;
-  padding: 10px;
-  border-radius: 30px;
-  color: gray;
-  align-items: center;
+    background-color: white;
+    color: grey;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    min-width: 70px;
 }
 .header_left > input {
     border: none;

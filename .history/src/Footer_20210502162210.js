@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDataLayerValue } from "./DataLayer"
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
@@ -10,12 +10,10 @@ import VolumeDownIcon from '@material-ui/icons/VolumeDown'
 import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import "./Footer.css"
 import { Grid, Slider } from '@material-ui/core';
-// import SpotifyWebApi from "spotify-web-api-js";
-// const spotify = new SpotifyWebApi();
+
 
 function Footer({ spotify }) {
     const [{ token, item, playing }, dispatch] = useDataLayerValue();
-
     useEffect(() => {
         spotify.getMyCurrentPlaybackState().then((r) => {
             console.log(r);
@@ -79,44 +77,29 @@ function Footer({ spotify }) {
     return (
         <div className="footer">
             <div className="footer_left">
-                <img
-                    className="footer_albumLogo"
-                    src={item?.album.images[0].url}
-                    alt={item?.name}
-                />
-                {item ? (
-                    <div className="footer_songInfo">
-                        <h4>{item.name}</h4>
-                        <p>{item.artists.map((artist) => artist.name).join(", ")}</p>
-                    </div>
-                ) : (
-                    <div className="footer_songInfo">
-                        <h4>No song is playing</h4>
-                        <p>...</p>
-                    </div>
-                )}
+                <img className="footer_albumlogo" src={item?.album.images[0].url} alt="" />
+                <div className="footer_songinfo">
+                    <h4>{item?.name}</h4>
+                    <p>{item?.artists.map((artist) => artist.name).join(", ")}</p>
+                </div>
             </div>
 
             <div className="footer_center">
                 <ShuffleIcon className="footer_green" />
                 <SkipPreviousIcon onClick={skipNext} className="footer_icon" />
-                {playing ? (
-                    <PauseCircleOutlineIcon
-                        onClick={handlePlayPause}
-                        fontSize="large"
-                        className="footer_icon"
-                    />
-                ) : (
-                    <PlayCircleOutlineIcon
-                        onClick={handlePlayPause}
-                        fontSize="large"
-                        className="footer_icon"
-                    />
-                )}
+                <PauseCircleOutlineIcon
+                    onClick={handlePlayPause}
+                    fontSize="large"
+                    className="footer_icon"
+                />
+                <PlayCircleOutlineIcon fontSize="large" className="footer_icon" onClick={handlePlayPause}
+                    fontSize="large"
+                    className="footer__icon" />
                 <SkipNextIcon onClick={skipPrevious} className="footer_icon" />
-                <RepeatIcon className="footer__green" />
+                <RepeatIcon className="footer_green" />
+
             </div>
-            <div className="footer__right">
+            <div className="footer_right" >
                 <Grid container spacing={2}>
                     <Grid item>
                         <PlaylistPlayIcon />
@@ -130,7 +113,9 @@ function Footer({ spotify }) {
                 </Grid>
             </div>
         </div>
+
     );
 }
+
 
 export default Footer;

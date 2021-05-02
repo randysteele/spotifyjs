@@ -9,13 +9,9 @@
   background-color: rgb(91, 87, 115);
   overflow-y: overlay;
 }
-
-.body::-webkit-scrollbar {
-  display: none;
-}
 .body_info {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: 10px;
 }
 .body_info_text {

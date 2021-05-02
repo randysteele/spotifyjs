@@ -9,10 +9,6 @@
   background-color: rgb(91, 87, 115);
   overflow-y: overlay;
 }
-
-.body::-webkit-scrollbar {
-  display: none;
-}
 .body_info {
   display: flex;
   align-items: flex-start;

@@ -8,12 +8,12 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import SongRow from './SongRow';
 
 function Body({ spotify }) {
-    const [{ discover_weekly }, dispatch] = useDataLayerValue();
+    const [{ discover_weekly }, dispatch] = useStateValue();
 
     const playPlaylist = (id) => {
         spotify
             .play({
-                context_uri: `spotify:playlist:37i9dQZEVXcTBlyMLqZ00r`,
+                context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
             })
             .then((res) => {
                 spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -52,19 +52,19 @@ function Body({ spotify }) {
         <div className="body">
             <Header spotify={spotify} />
 
-            <div className="body_info">
+            <div className="body__info">
                 <img src={discover_weekly?.images[0].url} alt="" />
-                <div className="body_infoText">
+                <div className="body__infoText">
                     <strong>PLAYLIST</strong>
                     <h2>Discover Weekly</h2>
                     <p>{discover_weekly?.description}</p>
                 </div>
             </div>
 
-            <div className="body_songs">
-                <div className="body_icons">
+            <div className="body__songs">
+                <div className="body__icons">
                     <PlayCircleFilledIcon
-                        className="body_shuffle"
+                        className="body__shuffle"
                         onClick={playPlaylist}
                     />
                     <FavoriteIcon fontSize="large" />

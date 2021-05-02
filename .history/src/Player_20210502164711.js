@@ -4,15 +4,15 @@ import "./Player.css";
 import Sidebar from "./Sidebar"
 import Body from "./Body"
 
-function Player({ spotify, token }) {
+function Player({ spotify }) {
     return (
         <div className="player">
             <div className="player_body">
                 <Sidebar />
-                <Body spotify={spotify} token={token} />
+                <Body spotify={spotify} />
             </div>
 
-            <Footer spotify={spotify} token={token} />
+            <Footer spotify={spotify} />
 
         </div>
     );

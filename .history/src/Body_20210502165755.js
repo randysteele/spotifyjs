@@ -13,7 +13,7 @@ function Body({ spotify }) {
     const playPlaylist = (id) => {
         spotify
             .play({
-                context_uri: `spotify:playlist:37i9dQZEVXcTBlyMLqZ00r`,
+                context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
             })
             .then((res) => {
                 spotify.getMyCurrentPlayingTrack().then((r) => {

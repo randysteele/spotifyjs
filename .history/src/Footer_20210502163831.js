@@ -13,7 +13,7 @@ import { Grid, Slider } from '@material-ui/core';
 // import SpotifyWebApi from "spotify-web-api-js";
 // const spotify = new SpotifyWebApi();
 
-function Footer({ spotify }) {
+function Footer({ token }) {
     const [{ token, item, playing }, dispatch] = useDataLayerValue();
 
     useEffect(() => {

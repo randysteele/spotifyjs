@@ -10,8 +10,7 @@ import VolumeDownIcon from '@material-ui/icons/VolumeDown'
 import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import "./Footer.css"
 import { Grid, Slider } from '@material-ui/core';
-// import SpotifyWebApi from "spotify-web-api-js";
-// const spotify = new SpotifyWebApi();
+const spotify = new SpotifyWebApi();
 
 function Footer({ spotify }) {
     const [{ token, item, playing }, dispatch] = useDataLayerValue();

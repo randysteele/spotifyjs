@@ -13,11 +13,11 @@ import { Grid, Slider } from '@material-ui/core';
 // import SpotifyWebApi from "spotify-web-api-js";
 // const spotify = new SpotifyWebApi();
 
-function Footer({ spotify }) {
+function Footer({ s }) {
     const [{ token, item, playing }, dispatch] = useDataLayerValue();
 
     useEffect(() => {
-        spotify.getMyCurrentPlaybackState().then((r) => {
+        s.getMyCurrentPlaybackState().then((r) => {
             console.log(r);
 
             dispatch({
@@ -30,17 +30,17 @@ function Footer({ spotify }) {
                 item: r.item,
             });
         });
-    }, [spotify]);
+    }, [s]);
 
     const handlePlayPause = () => {
         if (playing) {
-            spotify.pause();
+            s.pause();
             dispatch({
                 type: "SET_PLAYING",
                 playing: false,
             });
         } else {
-            spotify.play();
+            s.play();
             dispatch({
                 type: "SET_PLAYING",
                 playing: true,
@@ -49,8 +49,8 @@ function Footer({ spotify }) {
     };
 
     const skipNext = () => {
-        spotify.skipToNext();
-        spotify.getMyCurrentPlayingTrack().then((r) => {
+        s.skipToNext();
+        s.getMyCurrentPlayingTrack().then((r) => {
             dispatch({
                 type: "SET_ITEM",
                 item: r.item,
@@ -63,8 +63,8 @@ function Footer({ spotify }) {
     };
 
     const skipPrevious = () => {
-        spotify.skipToPrevious();
-        spotify.getMyCurrentPlayingTrack().then((r) => {
+        s.skipToPrevious();
+        s.getMyCurrentPlayingTrack().then((r) => {
             dispatch({
                 type: "SET_ITEM",
                 item: r.item,
