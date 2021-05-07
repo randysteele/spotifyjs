@@ -1,7 +1,7 @@
 //takes the user to the login page 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 //redirects back to our app
-const redirectUri = "https://spotifyjs-5382e.firebaseapp.com";
+const redirectUri = "https://spotifyjs-5382e.web.app";
 const client_id = "c54947b0c85c4c51a278eff55501985c";
 
 const scopes = [
